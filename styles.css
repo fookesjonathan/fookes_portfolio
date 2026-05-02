@@ -149,6 +149,10 @@ a {
   background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85");
 }
 
+.blog-hero {
+  background-image: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2200&q=85");
+}
+
 .hero-copy,
 .page-hero > div {
   position: relative;
@@ -224,7 +228,8 @@ h2 {
 .project-feature,
 .running-layout,
 .hobby-strip,
-.feature-strip {
+.feature-strip,
+.blog-layout {
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
   padding: clamp(56px, 8vw, 94px) 0;
@@ -456,6 +461,59 @@ h2 {
   display: block;
 }
 
+.blog-layout {
+  max-width: 900px;
+}
+
+.blog-post {
+  padding: clamp(26px, 5vw, 48px);
+  border: 1px solid rgba(58, 40, 27, 0.12);
+  border-radius: 8px;
+  background: #fffaf0;
+  box-shadow: var(--shadow);
+}
+
+.blog-post-header {
+  margin-bottom: 28px;
+}
+
+.goal-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.goal-list li {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(58, 40, 27, 0.12);
+  border-radius: 8px;
+  background: var(--cloud);
+}
+
+.goal-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  border-radius: 999px;
+  color: var(--forest);
+  background: var(--sand);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.goal-marker.complete {
+  color: var(--cloud);
+  background: var(--moss);
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -513,7 +571,8 @@ h2 {
   .running-layout,
   .feature-strip,
   .hobby-strip,
-  .planning-grid {
+  .planning-grid,
+  .goal-list li {
     grid-template-columns: 1fr;
   }
 
